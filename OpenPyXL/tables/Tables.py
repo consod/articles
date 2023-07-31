@@ -1,26 +1,15 @@
+#!/usr/bin/env python3
+
+"""
+Iterating over tables in an existing workbook
+"""
 from openpyxl import load_workbook
 
-filename = "Tables.xlsx"
+FILENAME = "Tables.xlsx"
 
-wb = load_workbook(filename)
+wb = load_workbook(FILENAME)
 
-ws = wb.worksheets[0]
+ws = wb.active
 
-ws_tables = []
-
-ws["E6"] = "VW"
-ws["F6"] = "Polo"
-ws["A6"] = "Peter"
-ws["B6"] = "Dinkle"
-ws["C6"] = "USA"
-
-
-for table in ws._tables:
-    ws_tables.append(table)
-    if table.name == "Cars":
-        table.ref = "E2:F6"
-    if table.name == "Customers":
-        table.ref = "A2:C6"
+for table in ws.tables.values():
     print(table.name, table.ref)
-
-wb.save(filename)
