@@ -1,0 +1,25 @@
+HELLO!!!!<Invoice>
+    <Date>2021-02-15 00:00:00</Date>
+    <Customer number>103</Customer number>
+    <Invoice row>
+        <Name>Spaghetti</Name>
+        <Amount>0.5</Amount>
+        <Unit>kg</Unit>
+        <Price>1</Price>
+        <Total>0.5</Total>
+    </Invoice row>
+    <Invoice row>
+        <Name>Pasta</Name>
+        <Amount>2</Amount>
+        <Unit>kg</Unit>
+        <Price>2</Price>
+        <Total>4</Total>
+    </Invoice row>
+    <Invoice row>
+        <Name>Pizza</Name>
+        <Amount>2</Amount>
+        <Unit>pcs</Unit>
+        <Price>10</Price>
+        <Total>20</Total>
+    </Invoice row>
+</Invoice>
