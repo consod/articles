@@ -77,6 +77,5 @@ finnish_and_swedish_names = [
 # Note that Faker.seed_instance() does not work with Community Providers
 fake_education = Faker()
 fake_education.add_provider(SchoolProvider)
-fake_education.seed_instance(0)
 print(fake_education.school_name())
 print(fake_education.school_level())
