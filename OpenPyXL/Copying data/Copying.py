@@ -22,32 +22,34 @@ WB2 = Workbook()
 
 # Create WB2 sheets WS1-WS10
 for i in range(1, 11):
-WB2.create_sheet(f"WS{i}")
+    WB2.create_sheet(f"WS{i}")
 
-# delete first sheet
-WB2.remove(WB2.worksheets[0])
+    # delete first sheet
+    WB2.remove(WB2.worksheets[0])
 
 # Define the copy ranges and sheets
 copy_ranges = [100, 200, 50, 300, 350]
 copy_to_sheets = ["WS1", "WS2", "WS3", "WS4", "WS4"]
 
 # Copy the values from the rows in WB1 to WB2.
-for i in range( len(copy_ranges)):
-# Set the sheet to copy to
-ws = WB2[ copy_to_sheets[i] ]
+for i in range(len(copy_ranges)):
+    # Set the sheet to copy to
+    ws = WB2[copy_to_sheets[i]]
 # Initialize row offset
 offset = 1
 # Set the row offset
 for s in range(i):
-offset += copy_ranges[s]
+    offset += copy_ranges[s]
 
 # Copy the row with the help of iter_rows, append the row
 for j in range(offset, offset + copy_ranges[i]):
-#if j == 0:
-# continue
-for row in WB1_WS1.iter_rows(min_row=j, max_row=j, min_col=1, max_col=WB1_WS1.max_column):
-values_row = [cell.value for cell in row]
-ws.append(values_row)
+    # if j == 0:
+    # continue
+    for row in WB1_WS1.iter_rows(
+        min_row=j, max_row=j, min_col=1, max_col=WB1_WS1.max_column
+    ):
+        values_row = [cell.value for cell in row]
+        ws.append(values_row)
 
 # Save the workbook
 WB2.save("WB2.xlsx")
