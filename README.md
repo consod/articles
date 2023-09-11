@@ -1,6 +1,10 @@
 # articles
-Code for my articles
+Code for my articles and Youtube videos
 
-More info on my bio page https://links.connysoderholm.com/
+Youtube: www.youtube.com/channel/UCRiiPRW5a_wV1531nMKdxkQ
+Medium: medium.com/@soderholm.conny
+Website: connysoderholm.com
+Bio page: links.connysoderholm.com
+LinkedIn: www.linkedin.com/in/connysoderholm/
 
 
