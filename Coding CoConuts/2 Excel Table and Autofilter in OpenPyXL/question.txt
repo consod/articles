@@ -1,0 +1,11 @@
+I am using OpenPyXL to create a new table. When I do this, table filters are automatically created with it.
+
+I would like to turn off the filters, and have tried the following, but been unsuccessful. How do I turn off table filters with OpenPyXL?
+
+table_style = pyxl.worksheet.table.TableStyleInfo(name="TableStyleLight1",showRowStripes=True)
+new_IO_Table = pyxl.worksheet.table.Table(displayName='IO_List', ref='A2:AO49',tableStyleInfo=table_style, autoFilter=None) 
+
+#I thought setting AutoFilter=None would solve my issue, but it does not.
+
+ws_IO_List.tables['IO_List'] = new_IO_Table
+This code still causes my table to have filters:
