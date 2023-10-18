@@ -3,7 +3,8 @@ from openpyxl import Workbook
 from win32com import client
 from pywintypes import com_error
 
-# Remember to install pillow, pip install pillow
+# Remember to install OpenPyXL. pywin32 and Pillow
+# pip install pillow openpyxl pywin32
 
 wb = Workbook()
 ws = wb.active
